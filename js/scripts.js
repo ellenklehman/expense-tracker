@@ -1,4 +1,7 @@
 $(document).ready(function() {
+  var newBigCategory;
+  var newBigPurchase;
+
   $("form#purchase").submit(function (event) {
     event.preventDefault();
 
@@ -9,6 +12,11 @@ $(document).ready(function() {
     total: function() {
       return this.cost * this.quantity;
     }
+  };
+
+  var Category = {
+    cDescription: "",
+    expenses: []
   };
 
   var newPurchase =Object.create(Purchase);
@@ -24,11 +32,21 @@ $(document).ready(function() {
                           "<td>"+ newPurchase.total() + "</td></tr>");
   });
 
+
 $("form#categories").submit(function (event) {
     event.preventDefault();
     var catName = $("#category").val();
     $('ul#category-list').append("<li>"+catName+"</li>");
     $("#category").val('');
+
+    $("#category-list li").last().click(function (){
+      $('#cat').text("");
+      $("#cat").text(catName);
+    });
+
+ var newCategory = Object.create(Category);
+ newCategory.cDescription = catName;
+
 });
 
 
