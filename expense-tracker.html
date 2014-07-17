@@ -1,25 +1,53 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
-    <link href="css/styles.css" rel="stylesheet" type="text/css">
-    <script src="js/jquery-1.11.1.js"></script>
-    <script src="js/scripts.js"></script>
-    <title></title>
-  </head>
-
-  <body>
-    <div class="container">
-
-      <form id="letters">
-        <div class="form-group">
-          <label for="input"></label>
-          <input id="input" type="text">
-        </div>
-        <button type="submit" id="btn">Click here!</button>
+<head>
+  <link href='http://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet' type='text/css'>
+  <link href="css/styles.css" rel="stylesheet" type="text/css">
+  <script src="js/jquery-1.11.1.js"></script>
+  <script src="js/scripts.js"></script>
+  <title></title>
+</head>
+<body>
+  <h1>Expense Tracker</h1>
+  <div id="container">
+    <div id="cat-a-gories">
+      <h3>Add Purchase</h3>
+      <form id="categories">
+        <input  type="text" id="category" placeholder="Add a New Category">
+        <button type="submit">Add</button>
       </form>
-      <p><span id="title"></span> </p>
-
+      <ul id="category-list"></ul>
     </div>
-  </body>
+    <div id="additions">
+      <h3>Add Purchase to...</h3>
+      <form id="purchase">
+        <input  type="text" id="description" placeholder="Add a Description">
+        <input  type="text" id="cost" placeholder="Enter a Cost">
+        <input  type="text" id="quantity" placeholder="Enter a quantity">
+        <button type="submit" id="track">Track</button>
+      </form>
+    </div>
+    <div id="expense-list">
+      <h3>Purchases</h3>
+      <table id="expenses">
+        <thead>
+          <tr>
+            <td>Description</td>
+            <td>Cost</td>
+            <td>Quantity</td>
+            <td>Total</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>test1</td>
+            <td>test2</td>
+            <td>test3</td>
+            <td>test4</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>
 </html>

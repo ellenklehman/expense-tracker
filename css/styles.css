@@ -1,0 +1,35 @@
+/** {
+  padding: 0;
+  margin: 0;
+}
+
+
+body {
+  text-align: center;
+  font-family: 'Comfortaa', cursive;
+  background-color: lightgray;
+  overflow: auto;
+}
+
+h1 {
+  margin: 20px;
+}
+
+div#container {
+  background: url("http://subtlepatterns.com/patterns/random_grey_variations.png");
+  border-radius: 0px 30px 0px 0px;
+  color: white;
+  box-shadow: 3px 3px 5px 0 #000;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+div:not(#container) {
+  border: 1px solid white;
+  margin-top: 10px;
+  width: 30%;
+}
+*/
+td {
+  border: 1px solid black;
+}
